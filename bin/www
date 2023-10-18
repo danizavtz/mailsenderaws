@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const app = require('../app');
+try {
+    app.listen(3000);
+    console.log('Microsservice listening at http://localhost:3000');
+} catch (err) {
+    throw err;
+}
