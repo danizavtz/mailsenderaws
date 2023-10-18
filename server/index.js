@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
         Destination: { /* obrigatório */
           ToAddresses: [
             'daniellucena@yahoo.com.br',
-            /* ou adicione mais destinatários */
+            /* adicione aqui um e-mail válido */
           ]
         },
         Message: { /* obrigatório */
@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
           },
         Source: 'contato@danizavtz.com.br',
         ReplyToAddresses: [
-           'daniellucena@yahoo.com.br'
+           'contato@danizavtz.com.br'
         ],
       };
     sendPromise = new AWS.SES({ apiVersion: '2010-12-01' }).sendEmail(params).promise();
